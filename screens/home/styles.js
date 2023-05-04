@@ -12,5 +12,10 @@ export const styles = {
   logo: {
     width: "300px",
     height: "300px",
+  },
+  title: {
+    color: "white",
+    fontSize: 28,
+    fontWeight: 900
   }
 }
