@@ -2,9 +2,9 @@ import { Box, Text } from "native-base";
 import React from "react";
 
 
-export const MatrizesRoute = 'Matrizes';
+export const AreaAlunoRoute = 'Área do aluno';
 
-export function Matrizes() {
+export function AreaAluno() {
   return (
     <>
       <Box>

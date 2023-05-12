@@ -6,7 +6,7 @@ import { Escrever, EscreverRoute } from "../../screens/escrever";
 import { Atividades, AtividadesRoute } from "../../screens/atividades";
 import { Temas, TemasRoute } from "../../screens/temas";
 import { theme } from "native-base";
-import { Matrizes, MatrizesRoute } from "../../screens/matrizes";
+import { AreaAluno, AreaAlunoRoute} from "../../screens/areaAluno";
 
 const Tab = createBottomTabNavigator();
 const iconSize = 32;
@@ -64,10 +64,10 @@ export function NavigationRoutes() {
         }}
       />
        <Tab.Screen
-        name={MatrizesRoute}
-        component={Matrizes}
+        name={AreaAlunoRoute}
+        component={AreaAluno}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="person" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="person-outline" color={color} size={iconSize} />)
         }}
       />
     </Tab.Navigator>
