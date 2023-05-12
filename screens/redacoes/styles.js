@@ -1,5 +1,5 @@
 export const styles = {
   container: {
-    flex: 1,
+    flex: 1
   }
-}
+};

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text } from "native-base";
+import { Box, Text, Button, View, Center, Card, VStack, Heading } from "native-base";
 import { styles } from "./styles";
 import { Essay } from "../../components/essay";
 
@@ -15,5 +15,6 @@ export function Redacoes() {
         />
       </Box>
     </React.Fragment>
+
   );
 }

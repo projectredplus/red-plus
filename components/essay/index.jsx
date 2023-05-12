@@ -7,8 +7,8 @@ import Icon  from "react-native-vector-icons/Ionicons";
 export function Essay({ tema, autor, arquivo }) {
   return (
     <React.Fragment>
-      <VStack bg={"white"} borderWidth={1} borderRadius={8} borderColor={"gray.300"} w={"100%"}>
-        <Center padding={4} background={"green.200"}>
+      <VStack bg={"white"} borderWidth={1} overflow={"hidden"} borderRadius={8} borderColor={"gray.300"} w={"100%"}>
+        <Center padding={5} background={"green.200"}>
           <Image size={"100px"} source={notebook} alt="Imagem de um caderno sorrindo" />
         </Center>
         <VStack padding={3}>
