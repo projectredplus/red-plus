@@ -5,6 +5,8 @@ import { Redacoes, RedacoesRoute } from "../../screens/redacoes";
 import { Escrever, EscreverRoute } from "../../screens/escrever";
 import { Atividades, AtividadesRoute } from "../../screens/atividades";
 import { Temas, TemasRoute } from "../../screens/temas";
+import { theme } from "native-base";
+import { Matrizes, MatrizesRoute } from "../../screens/matrizes";
 
 const Tab = createBottomTabNavigator();
 const iconSize = 32;
@@ -23,6 +25,7 @@ export function NavigationRoutes() {
           fontSize: 13,
           display: "none"
         },
+        tabBarActiveTintColor: theme.colors.green[600]
       }}
     >
       <Tab.Screen
@@ -43,21 +46,28 @@ export function NavigationRoutes() {
         name={EscreverRoute}
         component={Escrever}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="document-outline" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="pencil" color={color} size={iconSize} />)
         }}
       />
       <Tab.Screen
         name={AtividadesRoute}
         component={Atividades}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="rocket-outline" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="barbell-outline" color={color} size={iconSize} />)
         }}
       />
       <Tab.Screen
         name={TemasRoute}
         component={Temas}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="alert-outline" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="alert-circle-outline" color={color} size={iconSize} />)
+        }}
+      />
+       <Tab.Screen
+        name={MatrizesRoute}
+        component={Matrizes}
+        options={{
+          tabBarIcon: ({ color }) => (<Icon name="document-text-outline" color={color} size={iconSize} />)
         }}
       />
     </Tab.Navigator>
