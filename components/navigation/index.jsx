@@ -60,14 +60,14 @@ export function NavigationRoutes() {
         name={TemasRoute}
         component={Temas}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="alert-circle-outline" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="document-text-outline" color={color} size={iconSize} />)
         }}
       />
        <Tab.Screen
         name={MatrizesRoute}
         component={Matrizes}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="document-text-outline" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="person" color={color} size={iconSize} />)
         }}
       />
     </Tab.Navigator>

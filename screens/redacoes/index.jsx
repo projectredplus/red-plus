@@ -9,8 +9,10 @@ export function Redacoes() {
   return (
     <React.Fragment>
       <Box padding={4} {...styles.container}>
-        <Text>Redações</Text>
-        <Essay />
+        <Essay
+          tema={"Desafios para a formação educacional de surdos no Brasil"}
+          autor={"Renan Alves"}
+        />
       </Box>
     </React.Fragment>
   );

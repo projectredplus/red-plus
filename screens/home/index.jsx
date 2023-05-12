@@ -9,8 +9,8 @@ export const HomeRoute = "Home";
 export function Home() {
   return (
     <Center {...styles.container}>
-      <Image {...styles.bg} source={bg} />
-      <Image {...styles.logo} source={logo} />
+      <Image {...styles.bg} source={bg} alt="Backgorund" />
+      <Image {...styles.logo} source={logo} alt="Logo" />
       <Heading {...styles.title}>Bem Vindo, Renan!</Heading>
     </Center>
   );
