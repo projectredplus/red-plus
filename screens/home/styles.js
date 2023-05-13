@@ -17,7 +17,7 @@ export const styles = {
     height: "300px",
   },
   title: {
-    color: "white",
+    color: "gray.600",
     fontSize: 28,
     fontWeight: 900
   }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Center, Heading, Image, VStack, Text, HStack, theme } from "native-base";
+import { Box, Button, Center, Heading, Image, VStack, Text, HStack } from "native-base";
 import notebook from "../../assets/images/notebook.png";
 import Icon  from "react-native-vector-icons/Ionicons";
 
