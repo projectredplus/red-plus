@@ -53,7 +53,7 @@ export function NavigationRoutes() {
         name={AtividadesRoute}
         component={Atividades}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="barbell-outline" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="play-outline" color={color} size={iconSize} />)
         }}
       />
       <Tab.Screen

@@ -1,7 +1,10 @@
+import { theme } from "native-base";
+
 export const styles = {
   container: {
     flex: 1,
     position: "relative",
+    background: "white",
   },
   bg: {
     width: "100%",
