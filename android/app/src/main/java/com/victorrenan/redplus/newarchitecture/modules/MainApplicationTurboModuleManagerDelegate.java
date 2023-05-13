@@ -1,4 +1,4 @@
-package com.redplus.newarchitecture.modules;
+package com.victorrenan.redplus.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

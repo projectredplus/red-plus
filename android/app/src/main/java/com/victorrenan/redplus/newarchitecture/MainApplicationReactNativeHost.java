@@ -1,4 +1,4 @@
-package com.redplus.newarchitecture;
+package com.victorrenan.redplus.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -20,9 +20,9 @@ import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.redplus.BuildConfig;
-import com.redplus.newarchitecture.components.MainComponentsRegistry;
-import com.redplus.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.victorrenan.redplus.BuildConfig;
+import com.victorrenan.redplus.newarchitecture.components.MainComponentsRegistry;
+import com.victorrenan.redplus.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

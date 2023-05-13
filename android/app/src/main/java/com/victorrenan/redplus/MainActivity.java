@@ -1,4 +1,4 @@
-package com.redplus;
+package com.victorrenan.redplus;
 
 import android.os.Build;
 import android.os.Bundle;

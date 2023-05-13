@@ -1,4 +1,4 @@
-package com.redplus.newarchitecture.components;
+package com.victorrenan.redplus.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
