@@ -45,25 +45,23 @@ export function Escrever() {
               : null)
         : null}
       <Center {...styles.container} p={5}>
-        <Center mb={5}>
-          <Stopwatch
-            laps
-            start={isStopwatchStart}
-            reset={resetStopwatch}
-            getTime={(time) => {
-              setTime(time);
-            }}
-            options={{
-              text: {
-                fontWeight: "600",
-                fontSize: 56
-              }
-            }}
-          />
-        </Center>
-        <HStack>
+        <Stopwatch
+          laps
+          start={isStopwatchStart}
+          reset={resetStopwatch}
+          getTime={(time) => {
+            setTime(time);
+          }}
+          options={{
+            text: {
+              fontWeight: "600",
+              fontSize: 56
+            }
+          }}
+        />
+        <HStack px={12} my={5}>
           <Button
-            w={"220px"}
+            w={"100%"}
             onPress={() => {
               setIsStopwatchStart(!isStopwatchStart);
               setResetStopwatch(false);
@@ -115,36 +113,19 @@ export function Escrever() {
             <Icon name="refresh-outline" color={"white"} size={24} />
           </Button>
         </HStack>
-      </Center>
-      <Center>
-        <Heading fontWeight={"800"} mb={2}>Classificação</Heading>
-        <Alert colorScheme={"green"} alignItems={"center"} p={4} w={"100%"}>
-          <HStack alignItems={"center"}>
-            <HStack alignItems={"center"} mr={3}>
-              <Icon name="time-outline" color={"green"} size={28} />
-              <Text color={"green.700"} bold fontSize={18}>Bom</Text>
+        {seconds && isStopwatchStart == false
+          ? (
+            <HStack px={6}>
+              <Button size={"lg"} width={"100%"} colorScheme={"darkBlue"}>
+                <HStack alignItems={"center"}>
+                  <Icon name="camera" color={"white"} size={24} />
+                  <Text fontSize={18} fontWeight={"bold"} color={"white"} ml={1}>
+                    Digitalizar
+                  </Text>
+                </HStack>
+              </Button>
             </HStack>
-            <Text color={"green.700"} fontSize={16}>Redigir em até 60 min</Text>
-          </HStack>
-        </Alert>
-        <Alert colorScheme={"amber"} alignItems={"center"} p={4} w={"100%"}>
-          <HStack alignItems={"center"}>
-            <HStack alignItems={"center"} mr={3}>
-              <Icon name="time-outline" color={"orange"} size={28} />
-              <Text color={"amber.500"} bold fontSize={18}>Mediano</Text>
-            </HStack>
-            <Text color={"amber.500"} fontSize={16}>Redigir em até 1h e 30min</Text>
-          </HStack>
-        </Alert>
-        <Alert colorScheme={"red"} alignItems={"center"} p={4} w={"100%"}>
-          <HStack alignItems={"center"}>
-            <HStack alignItems={"center"} mr={3}>
-              <Icon name="time-outline" color={"red"} size={28} />
-              <Text color={"red.500"} bold fontSize={18}>Ruim</Text>
-            </HStack>
-            <Text color={"red.500"} fontSize={16}>Redigir em mais de 1h e 30min</Text>
-          </HStack>
-        </Alert>
+          ) : null}
       </Center>
     </React.Fragment>
   );
