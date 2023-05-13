@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Alert, Box, Button, Center, HStack, Modal, Text } from "native-base";
+import { Alert, Box, Button, Center, HStack, Heading, Modal, Text } from "native-base";
 import { styles } from "./styles";
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -115,6 +115,36 @@ export function Escrever() {
             <Icon name="refresh-outline" color={"white"} size={24} />
           </Button>
         </HStack>
+      </Center>
+      <Center>
+        <Heading fontWeight={"800"} mb={2}>Classificação</Heading>
+        <Alert colorScheme={"green"} alignItems={"center"} p={4} w={"100%"}>
+          <HStack alignItems={"center"}>
+            <HStack alignItems={"center"} mr={3}>
+              <Icon name="time-outline" color={"green"} size={28} />
+              <Text color={"green.700"} bold fontSize={18}>Bom</Text>
+            </HStack>
+            <Text color={"green.700"} fontSize={16}>Redigir em até 60 min</Text>
+          </HStack>
+        </Alert>
+        <Alert colorScheme={"amber"} alignItems={"center"} p={4} w={"100%"}>
+          <HStack alignItems={"center"}>
+            <HStack alignItems={"center"} mr={3}>
+              <Icon name="time-outline" color={"orange"} size={28} />
+              <Text color={"amber.500"} bold fontSize={18}>Mediano</Text>
+            </HStack>
+            <Text color={"amber.500"} fontSize={16}>Redigir em até 1h e 30min</Text>
+          </HStack>
+        </Alert>
+        <Alert colorScheme={"red"} alignItems={"center"} p={4} w={"100%"}>
+          <HStack alignItems={"center"}>
+            <HStack alignItems={"center"} mr={3}>
+              <Icon name="time-outline" color={"red"} size={28} />
+              <Text color={"red.500"} bold fontSize={18}>Ruim</Text>
+            </HStack>
+            <Text color={"red.500"} fontSize={16}>Redigir em mais de 1h e 30min</Text>
+          </HStack>
+        </Alert>
       </Center>
     </React.Fragment>
   );
