@@ -1,28 +1,20 @@
 import React from "react";
 import { Box, Button, Center, Heading, Image, VStack, Text, HStack } from "native-base";
 import notebook from "../../assets/images/notebook.png";
-import Icon  from "react-native-vector-icons/Ionicons";
+import Icon from "react-native-vector-icons/Ionicons";
 
 
-export function Atividade({ name, description, arquivo }) {
+export function Atividade({ name, arquivo }) {
   return (
     <React.Fragment>
-      <VStack bg={"white"} borderWidth={1} overflow={"hidden"} borderRadius={8} borderColor={"gray.300"} w={"100%"}>
-        <Center padding={5} background={"green.200"}>
-          <Image size={"100px"} source={notebook} alt="Imagem de um caderno sorrindo" />
-        </Center>
-        <VStack padding={3}>
-          <Heading fontSize={22}>{name}</Heading>
-          <HStack mt={"26px"}>
-            <Text fontSize={17}>{description}</Text>
-            <HStack ml={"auto"} alignItems={"center"}>
-              <Icon name="star" size={20} color={"orange"} />
-              <Text ml={1} fontSize={17}>1000</Text>
-            </HStack>
-          </HStack>
-        </VStack>
-        <Button size={"lg"} borderRadius={0} colorScheme={"green"}>Ver redação</Button>
-      </VStack>
+      <Box py={"1px"}>
+        <HStack px={3} py={2} alignItems={"center"} bg={"white"} borderWidth={1} overflow={"hidden"} borderRadius={8} borderColor={"gray.300"} w={"100%"}>
+          <Text bold fontSize={20}>{name}</Text>
+          <Button ml={"auto"} px={5} size={"lg"} borderRadius={30} colorScheme={"green"}>
+            Praticar
+          </Button>
+        </HStack>
+      </Box>
     </React.Fragment>
   );
 }

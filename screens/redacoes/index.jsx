@@ -25,13 +25,18 @@ const essays = [
     tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, beatae?",
     autor: "Lorem ipsum",
     file: "google.com"
+  },
+  {
+    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, beatae?",
+    autor: "Lorem ipsum",
+    file: "google.com"
   }
 ]
 
 export function Redacoes() {
   return (
     <React.Fragment>
-      <ScrollView mb={3} padding={3} flex={1}>
+      <ScrollView padding={3} flex={1}>
         <Flex wrap="wrap" direction="row">
           {essays.map(essay => (
             <Essay
