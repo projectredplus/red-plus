@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home, HomeRoute } from "../../screens/home";
-import Icon from "react-native-vector-icons/Ionicons";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Redacoes, RedacoesRoute } from "../../screens/redacoes";
 import { Escrever, EscreverRoute } from "../../screens/escrever";
 import { Atividades, AtividadesRoute } from "../../screens/atividades";
@@ -39,14 +39,14 @@ export function NavigationRoutes() {
         name={RedacoesRoute}
         component={Redacoes}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="ribbon-outline" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="trophy-outline" color={color} size={iconSize} />)
         }}
       />
       <Tab.Screen
         name={EscreverRoute}
         component={Escrever}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="pencil" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="pencil-outline" color={color} size={iconSize} />)
         }}
       />
       <Tab.Screen
@@ -60,14 +60,14 @@ export function NavigationRoutes() {
         name={TemasRoute}
         component={Temas}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="document-text-outline" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="file-document-outline" color={color} size={iconSize} />)
         }}
       />
        <Tab.Screen
         name={AreaAlunoRoute}
         component={AreaAluno}
         options={{
-          tabBarIcon: ({ color }) => (<Icon name="person-outline" color={color} size={iconSize} />)
+          tabBarIcon: ({ color }) => (<Icon name="account-outline" color={color} size={iconSize} />)
         }}
       />
     </Tab.Navigator>

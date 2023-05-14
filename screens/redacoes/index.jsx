@@ -7,27 +7,27 @@ export const RedacoesRoute = "Redações nota 1000";
 
 const essays = [
   {
-    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, beatae?",
+    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elitf. Eveniet, beatae?",
     autor: "Renan Alves",
     file: "google.com"
   },
   {
-    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, beatae?",
+    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elitd. Eveniet, beatae?",
     autor: "Lorem ipsum",
     file: "google.com"
   },
   {
-    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, beatae?",
+    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elist. Eveniet, beatae?",
     autor: "Lorem ipsum",
     file: "google.com"
   },
   {
-    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, beatae?",
+    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing eldit. Eveniet, beatae?",
     autor: "Lorem ipsum",
     file: "google.com"
   },
   {
-    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, beatae?",
+    tema: "Lorem ipsum, dolor sit amet consectetur adipisicing elwit. Eveniet, beatae?",
     autor: "Lorem ipsum",
     file: "google.com"
   }
@@ -40,7 +40,7 @@ export function Redacoes() {
         <Flex wrap="wrap" direction="row">
           {essays.map(essay => (
             <Essay
-              key={essay.file}
+              key={essay.tema}
               tema={essay.tema}
               autor={essay.autor}
               arquivo={essay.file}

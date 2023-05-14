@@ -4,14 +4,14 @@ import notebook from "../../assets/images/notebook.png";
 import Icon from "react-native-vector-icons/Ionicons";
 
 
-export function Atividade({ name, arquivo }) {
+export function Material({ name, arquivo }) {
   return (
     <React.Fragment>
       <Box py={"1px"}>
         <HStack px={3} py={2} alignItems={"center"} bg={"white"} borderWidth={1} overflow={"hidden"} borderRadius={8} borderColor={"gray.300"} w={"100%"}>
-          <Text w={"75%"} bold fontSize={20}>{name}</Text>
+          <Text w={"75%"} bold fontSize={18}>{name}</Text>
           <Button ml={"auto"} px={5} size={"lg"} borderRadius={30} colorScheme={"green"}>
-            Praticar
+            Estudar
           </Button>
         </HStack>
       </Box>
