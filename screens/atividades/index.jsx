@@ -30,6 +30,7 @@ export function Atividades() {
       <ScrollView flex={1} padding={3}>
         {atividades.map(atividade => (
           <Atividade
+            key={atividade.name}
             name={atividade.name}
             arquivo={atividade.arquivo}
           />
