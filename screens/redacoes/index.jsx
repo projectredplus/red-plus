@@ -3,7 +3,7 @@ import { Box, Text, Button, View, Center, Card, VStack, Heading, ScrollView, HSt
 import { styles } from "./styles";
 import { Essay } from "../../components/essay";
 
-export const RedacoesRoute = "Redações nota 1000";
+export const RedacoesRoute = "Redações de milhões";
 
 const essays = [
   {
