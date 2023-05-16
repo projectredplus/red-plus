@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Center, Image, VStack, Text, Box } from "native-base";
 import notebook from "../../assets/images/notebook.png";
 
+
 export function Essay({ autor, arquivo }) {
   return (
     <React.Fragment>

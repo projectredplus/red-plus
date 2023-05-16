@@ -43,7 +43,7 @@ export function Video({ videoId }) {
         videoId={videoId}
         onReady={() => setReady(true)}
       />
-      {!ready && <ActivityIndicator color="orange" />}
+      {!ready && <ActivityIndicator color="green" />}
     </View>
   );
 }
