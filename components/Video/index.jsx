@@ -23,7 +23,7 @@ export function Video({ videoId }) {
     }
   }, []);
 
-  const height = 220;
+  const height = 200;
 
   return (
     <View height={height} justifyContent={"center"}>

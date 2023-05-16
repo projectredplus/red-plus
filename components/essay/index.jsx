@@ -13,7 +13,7 @@ export function Essay({ autor, arquivo }) {
           </Center>
           <VStack alignItems={"center"} bg="green.200">
             <Text fontSize={18}>Redação de</Text>
-            <Text fontSize={20} pb={2} bold>{autor}</Text>
+            <Text textAlign={"center"} fontSize={20} pb={2} bold>{autor}</Text>
           </VStack>
           <Button size={"lg"} borderRadius={0} colorScheme={"green"}>Ver redação</Button>
         </VStack>
