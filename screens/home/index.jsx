@@ -46,7 +46,7 @@ export function Home() {
           </Box>
         )
         : (
-          <Heading fontSize={28}>Bem vindo <Text color={"green.500"}>{hasUser}!</Text></Heading>
+          <Heading fontSize={28}>Bem-vindo(a) <Text color={"green.500"}>{hasUser}!</Text></Heading>
         )}
     </Center>
   );
