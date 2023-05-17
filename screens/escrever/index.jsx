@@ -5,7 +5,8 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { Stopwatch } from "react-native-stopwatch-timer";
 import { Camera, CameraType, FlashMode } from "expo-camera";
 import * as MediaLibrary from "expo-media-library";
-import TextRecognition from "react-native-text-recognition"
+import { createWorker }from "tesseract.js";
+
 
 export const EscreverRoute = "Escrever";
 
@@ -32,8 +33,9 @@ export function Escrever() {
       try {
         MediaLibrary.requestPermissionsAsync();
         const cameraStatus = await Camera.requestCameraPermissionsAsync();
-        console.log(cameraStatus)
+        console.log(cameraStatus);
         setPermission(true);
+
       } catch (e) {
         console.log(e);
         setPermission(false);
@@ -70,9 +72,17 @@ export function Escrever() {
 
   const recognizeImageFromUri = async () => {
     console.log("[IMAGE] ", image)
+    // Cria um worker
+    const worker = await createWorker({
+      logger: msg => console.log(msg)
+    });
+
     try {
-      setResult(await TextRecognition.recognize(image));
-      console.log(result)
+      await worker.loadLanguage('pt');
+      await worker.initialize('pt');
+      const { data: { text } } = await worker.recognize(image);
+      console.log(text);
+      await worker.terminate();
     } catch (e) {
       console.log(e);
     }
@@ -225,7 +235,7 @@ export function Escrever() {
               <Icon name="camera-outline" size={28} color={"white"} />
             </HStack>
           </Button>
-          <Button mx={"auto"} onPress={() => recognizeImageFromUri(image)} colorScheme={"gray"} w={"56px"} height={"56px"} borderRadius={"56px"}>
+          <Button mx={"auto"} onPress={() => recognizeImageFromUri()} colorScheme={"gray"} w={"56px"} height={"56px"} borderRadius={"56px"}>
             <HStack>
               <Icon name="enter-outline" size={28} color={"white"} />
             </HStack>
