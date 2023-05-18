@@ -5,8 +5,6 @@ import Icon from "react-native-vector-icons/Ionicons";
 import { Stopwatch } from "react-native-stopwatch-timer";
 import { Camera, CameraType, FlashMode } from "expo-camera";
 import * as MediaLibrary from "expo-media-library";
-import { createWorker }from "tesseract.js";
-
 
 export const EscreverRoute = "Escrever";
 
@@ -67,27 +65,7 @@ export function Escrever() {
   }
 
   const [flash, setFlash] = React.useState(false);
-  const [result, setResult] = React.useState(null);
-
-
-  const recognizeImageFromUri = async () => {
-    console.log("[IMAGE] ", image)
-    // Cria um worker
-    const worker = await createWorker({
-      logger: msg => console.log(msg)
-    });
-
-    try {
-      await worker.loadLanguage('pt');
-      await worker.initialize('pt');
-      const { data: { text } } = await worker.recognize(image);
-      console.log(text);
-      await worker.terminate();
-    } catch (e) {
-      console.log(e);
-    }
-  }
-
+  
   return (
     <React.Fragment>
 
