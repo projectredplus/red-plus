@@ -1,9 +1,11 @@
 import React from "react";
-import { Alert, Image, Button, Center, HStack, VStack, Modal, Text, View, Box } from "native-base";
+import { Alert as RNAlert } from "react-native";
+import { Image, Button, Center, HStack, VStack, Modal, Text, View, Box, Link, ScrollView, Alert } from "native-base";
 import { styles } from "./styles";
 import Icon from "react-native-vector-icons/Ionicons";
 import { Stopwatch } from "react-native-stopwatch-timer";
 import { RichEditor } from "react-native-pell-rich-editor";
+import * as Clipboard from "expo-clipboard";
 
 export const EscreverRoute = "Escrever";
 
@@ -16,8 +18,6 @@ export function Escrever() {
   const minutes = +time.slice(-5, -3);
   const hours = +time.slice(-8, -6);
   const seconds = +time.slice(-2);
-
-  console.log(hours, minutes)
 
   const [flash, setFlash] = React.useState(false);
 
@@ -32,10 +32,15 @@ export function Escrever() {
     }
   }
 
+  const copyToClipboard = async (text) => {
+    let formated = text.split('<div>').join('\n').split('</div>').join('');
+    await Clipboard.setStringAsync(formated);
+  }
+
   return (
     <React.Fragment>
 
-      <View flex={1}>
+      <ScrollView flex={1}>
         {seconds && isStopwatchStart == false
           ? ((hours < 1)
             ? (
@@ -59,7 +64,7 @@ export function Escrever() {
                 )
                 : null)
           : null}
-        <Center {...styles.container} p={5}>
+        <Center flex={1} p={3}>
           <Stopwatch
             laps
             start={isStopwatchStart}
@@ -128,30 +133,37 @@ export function Escrever() {
               <Icon name="refresh-outline" color={"white"} size={24} />
             </Button>
           </HStack>
-          {seconds && isStopwatchStart == false
-            ? (
-              <View w={"100%"} px={1}>
-                <HStack>
-                  <RichEditor
-                    ref={editor} // from useRef()
-                    onChange={editorHandle}
-                    placeholder="Digite sua redação aqui"
-                    androidHardwareAccelerationDisabled={true}
-                    style={{
-                      display: "flex",
-                      width: "100%",
-                      backgroundColor: "white",
-                      borderWidth: 1,
-                      borderColor: "#ddd",
-                    }}
-                    initialHeight={300}
-                  />
-                </HStack>
-                <Button mt={2} size={"lg"} width={"100%"} colorScheme={"darkBlue"}>Corrigir (Glau)</Button>
-              </View>
-            ) : null}
+          <View display={seconds && isStopwatchStart == false ? "flex" : "none"} w={"100%"} px={1}>
+            <Alert colorScheme={"darkBlue"} mb={1}>Cole sua redação após clicar no botão abaixo!</Alert>
+            <HStack>
+              <RichEditor
+                scrollEnabled
+                pasteAsPlainText={true}
+                ref={editor} // from useRef()
+                onChange={editorHandle}
+                placeholder="Digite sua redação aqui"
+                androidHardwareAccelerationDisabled={true}
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  backgroundColor: "white",
+                  borderWidth: 1,
+                  borderColor: "#ddd",
+                }}
+                initialHeight={300}
+              />
+            </HStack>
+            <Link
+              href={text != null ? "https://app.glau.com.vc/aluno/praticar/nova-redacao" : null} borderRadius={4} alignItems={"center"} justifyContent={"center"} padding={3} mt={2} fontWeight={800} width={"100%"} bg={"darkBlue.400"} color={"white"}
+              onPress={() => {
+                text != null ? copyToClipboard(text) : RNAlert.alert('Digite sua redação primeiro!')
+              }}
+            >
+              <Text fontSize={18} fontWeight={700} color={"white"}>Corrigir (Glau)</Text>
+            </Link>
+          </View>
         </Center>
-      </View>
-    </React.Fragment>
+      </ScrollView>
+    </React.Fragment >
   );
 }
