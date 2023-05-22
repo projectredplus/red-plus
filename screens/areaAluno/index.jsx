@@ -4,24 +4,10 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Material } from "../../components/material";
 import { Video } from "../../components/Video";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-
+import { matrizes } from "../../assets/data/matrizes";
+import { videos } from "../../assets/data/videos";
 
 export const AreaAlunoRoute = 'Área do aluno';
-
-const materiais = [
-  {
-    name: "O que faz zerar uma redaçãoa+?",
-    arquivo: "google.com"
-  },
-  {
-    name: "O que faz zerar uma redação?",
-    arquivo: "google.com"
-  },
-  {
-    name: "O que faz zerar uma redação",
-    arquivo: "google.com"
-  },
-]
 
 export function AreaAluno() {
   const [hasUser, setHasUser] = React.useState(null);
@@ -42,7 +28,7 @@ export function AreaAluno() {
           <Center mb={1} borderWidth={1} borderColor={"green.400"} width={"90px"} height={"90px"} borderRadius={100} bg={"green.200"}>
             <Icon size={50} name="account-outline" color={"green"} />
           </Center>
-          {hasUser ? <Heading>{hasUser}</Heading> : <Heading>&lt;desconhecido&gt;</Heading>}
+          {hasUser ? <Heading>{hasUser}</Heading> : <Heading>?</Heading>}
           
         </Center>
         <HStack alignItems={"center"} mb={2}>
@@ -52,7 +38,7 @@ export function AreaAluno() {
           <Heading>Matrizes</Heading>
         </HStack>
         <Box mb={5}>
-          {materiais.map(material => (
+          {matrizes.map(material => (
             <Material
               key={material.name}
               name={material.name}
@@ -67,8 +53,9 @@ export function AreaAluno() {
           <Heading>Video-aulas</Heading>
         </HStack>
         <Box>
-          <Video videoId={"eLa685J5uA8"} />
-          <Video videoId={"eLa685J5uA8"} />
+          {videos.map(video => (
+            <Video key={video} videoId={video} />
+          ))}
         </Box>
       </ScrollView>
     </React.Fragment>
