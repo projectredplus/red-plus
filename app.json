@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Red Plus",
+    "name": "Red plus",
     "slug": "red-plus",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -16,16 +16,12 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "infoPlist": {
-        "NSPhotoLibraryUsageDescription": "Allow $(PRODUCT_NAME) to access your photos.",
-        "NSPhotoLibraryAddUsageDescription": "Allow $(PRODUCT_NAME) to save photos."
-      },
-      "bundleIdentifier": "com.victorrenan.redplus"
+      "bundleIdentifier": "com.redplus.redplus"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#6a9b49"
       },
       "package": "com.redplus.redplus"
     },
@@ -36,6 +32,7 @@
       "eas": {
         "projectId": "cc98019e-2c54-47a2-ad91-2c1c9e02f269"
       }
-    }
+    },
+    "owner": "redplus"
   }
 }
