@@ -50,14 +50,34 @@ export const essays = [
     year: "2018",
   },
   {
-    autor: "Evely",
-    file: "https://drive.google.com/file/d/1IzIaa4JyI9DGvKb_GWUh0pru7WJrgXAt/view?usp=share_link",
-    year: "2021",
+    autor: "Ana",
+    file: "https://drive.google.com/file/d/1U0JipeyZCmlcN0sbpwtYdqKXm4kbRD9Z/view?usp=share_link",
+    year: "2019",
   },
   {
-    autor: "Giovanna",
-    file: "https://drive.google.com/file/d/1XLviigl_ULTFQUXw67IN8W1sRGcO7dHL/view?usp=share_link",
-    year: "2021",
+    autor: "Alana",
+    file: "https://drive.google.com/file/d/15q_GIl26oJokHrdzkaXGxaTbiuFFM2Rb/view?usp=share_link",
+    year: "2019",
+  },
+  {
+    autor: "Guilherme",
+    file: "https://drive.google.com/file/d/1aJwwnPZLr8VNmKwkpLAzehkFwm_a3aq2/view?usp=share_link",
+    year: "2019",
+  },
+  {
+    autor: "Juliana",
+    file: "https://drive.google.com/file/d/16ZvXfKbvwUSMjms6zsAmLhI5WewSQ_dV/view?usp=share_link",
+    year: "2019",
+  },
+  {
+    autor: "Juliana",
+    file: "https://drive.google.com/file/d/16ZvXfKbvwUSMjms6zsAmLhI5WewSQ_dV/view?usp=share_link",
+    year: "2019",
+  },
+  {
+    autor: "Vinícius",
+    file: "https://drive.google.com/file/d/1QY-LVt0UhvVAfRhKG4iD8L-jiQrJ4J-H/view?usp=share_link",
+    year: "2019",
   },
   {
     autor: "Iasmin",
