@@ -40,10 +40,13 @@ export function Home() {
       <Image {...styles.logo} source={logo} alt="Logo" />
       {hasUser == null
         ? (
-          <Box width={"75%"}>
-            <Input onChangeText={value => setUser(value)} mb={2} placeholder="Digite seu nome" fontSize={18} />
-            <Button onPress={(e) => handleSubmit(e)} colorScheme={"green"}>Enviar</Button>
-          </Box>
+          <React.Fragment>
+            <Heading fontSize={28} fontWeight={"900"} mb={3}>Bem vindo ao RedPlus!</Heading>
+            <Box width={"75%"}>
+              <Input onChangeText={value => setUser(value)} mb={2} placeholder="Digite seu nome" fontSize={18} />
+              <Button onPress={(e) => handleSubmit(e)} colorScheme={"green"}>Enviar</Button>
+            </Box>
+          </React.Fragment>
         )
         : (
           <Heading fontSize={28}>Bem-vindo(a) <Text color={"green.500"}>{hasUser}!</Text></Heading>
