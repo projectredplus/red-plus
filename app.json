@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "red-plus",
+    "name": "Red Plus",
     "slug": "red-plus",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -27,37 +27,14 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "permissions": [
-        "android.permission.CAMERA",
-        "android.permission.RECORD_AUDIO",
-        "android.permission.READ_EXTERNAL_STORAGE",
-        "android.permission.WRITE_EXTERNAL_STORAGE",
-        "android.permission.ACCESS_MEDIA_LOCATION"
-      ],
-      "package": "com.victorrenan.redplus"
+      "package": "com.redplus.redplus"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      [
-        "expo-camera",
-        {
-          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
-        }
-      ],
-      [
-        "expo-media-library",
-        {
-          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos.",
-          "savePhotosPermission": "Allow $(PRODUCT_NAME) to save photos.",
-          "isAccessMediaLocationEnabled": true
-        }
-      ]
-    ],
     "extra": {
       "eas": {
-        "projectId": "ea3c7d07-fbc2-4312-aadd-f7a85b8aa924"
+        "projectId": "cc98019e-2c54-47a2-ad91-2c1c9e02f269"
       }
     }
   }

@@ -13,6 +13,7 @@
     "@react-navigation/native": "^6.1.6",
     "expo": "~46.0.21",
     "expo-clipboard": "~3.1.0",
+    "expo-doctor": "^1.0.6",
     "expo-module-scripts": "^3.0.7",
     "expo-screen-orientation": "~4.3.0",
     "expo-splash-screen": "~0.16.2",
