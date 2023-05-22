@@ -15,8 +15,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.redplus.redplus"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -32,7 +31,6 @@
       "eas": {
         "projectId": "cc98019e-2c54-47a2-ad91-2c1c9e02f269"
       }
-    },
-    "owner": "redplus"
+    }
   }
 }
