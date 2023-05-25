@@ -19,8 +19,6 @@ export function Escrever() {
   const hours = +time.slice(-8, -6);
   const seconds = +time.slice(-2);
 
-  const [flash, setFlash] = React.useState(false);
-
   const editor = React.useRef();
   const [text, setText] = React.useState(null);
 
