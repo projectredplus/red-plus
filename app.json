@@ -1,6 +1,14 @@
 {
   "expo": {
-    "name": "Red plus",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ]
+    ],
+    "name": "RedPlus",
     "slug": "red-plus",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,7 +17,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#6a9b49"
+      "backgroundColor": "#ffffff"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -20,7 +28,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#6a9b49"
+        "backgroundColor": "#ffffff"
       },
       "package": "com.redplus.redplus"
     },

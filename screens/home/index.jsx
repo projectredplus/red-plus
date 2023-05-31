@@ -54,7 +54,7 @@ export function Home({ navigation }) {
           </React.Fragment>
         )
         : (
-          <Heading fontSize={28}>Bem-vindo(a) <Text underline>{hasUser}!</Text></Heading>
+          <Heading fontSize={30}>Bem-vindo(a) <Text>{hasUser}!</Text></Heading>
         )}
     </Center>
   );
