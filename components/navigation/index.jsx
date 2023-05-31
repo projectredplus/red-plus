@@ -6,7 +6,8 @@ import { Escrever, EscreverRoute } from "../../screens/escrever";
 import { Atividades, AtividadesRoute } from "../../screens/atividades";
 import { Temas, TemasRoute } from "../../screens/temas";
 import { theme } from "native-base";
-import { AreaAluno, AreaAlunoRoute} from "../../screens/areaAluno";
+import { AreaAluno, AreaAlunoRoute } from "../../screens/areaAluno";
+import { Desafio, DesafioRoute } from "../../screens/desafio";
 
 const Tab = createBottomTabNavigator();
 const iconSize = 32;
@@ -63,13 +64,21 @@ export function NavigationRoutes() {
           tabBarIcon: ({ color }) => (<Icon name="file-document-outline" color={color} size={iconSize} />)
         }}
       />
-       <Tab.Screen
+      <Tab.Screen
+        name={DesafioRoute}
+        component={Desafio}
+        options={{
+          tabBarIcon: ({ color }) => (<Icon name="trophy-award" color={color} size={iconSize} />)
+        }}
+      />
+      <Tab.Screen
         name={AreaAlunoRoute}
         component={AreaAluno}
         options={{
           tabBarIcon: ({ color }) => (<Icon name="account-outline" color={color} size={iconSize} />)
         }}
       />
+
     </Tab.Navigator>
   )
 }
