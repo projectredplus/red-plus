@@ -13,12 +13,12 @@ export function Redacoes() {
   console.log(filteredEssays.length)
   return (
     <React.Fragment>
-      <Center padding={4} py={2} pb={0}>
+      <Center p={3} backgroundColor={"blueGray.700"} borderBottomWidth={1} borderBottomColor={"blueGray.300"} py={2} pb={4}>
         <Box w={"100%"} mt={3}>
           <Select
             fontSize={18}
+            borderColor={"primary.600"}
             selectedValue={selectedYear}
-            bg={"white"}
             onValueChange={(itemValue) => setSelectedYear(itemValue)}
           >
             {years.map(year => (
@@ -27,7 +27,7 @@ export function Redacoes() {
           </Select>
         </Box>
       </Center>
-      <ScrollView mb={3} padding={3} flex={1}>
+      <ScrollView padding={2} flex={1} backgroundColor={"blueGray.700"}>
         <Flex direction="row" wrap="wrap">
           {filteredEssays.map((essay) => (
             <Essay key={essay.autor} autor={essay.autor} arquivo={essay.file} />

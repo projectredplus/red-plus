@@ -4,29 +4,40 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Redacoes, RedacoesRoute } from "../../screens/redacoes";
 import { Escrever, EscreverRoute } from "../../screens/escrever";
 import { Atividades, AtividadesRoute } from "../../screens/atividades";
+import { theme as customTheme } from "../../assets/themes/dark";
 import { Temas, TemasRoute } from "../../screens/temas";
-import { theme } from "native-base";
+import { extendTheme } from "native-base";
 import { AreaAluno, AreaAlunoRoute } from "../../screens/areaAluno";
 import { Desafio, DesafioRoute } from "../../screens/desafio";
 
 const Tab = createBottomTabNavigator();
 const iconSize = 32;
 
+const theme = extendTheme(customTheme);
+
 export function NavigationRoutes() {
 
   return (
     <Tab.Navigator
       screenOptions={{
+        headerTintColor: theme.colors.white,
+        headerStyle: {
+          backgroundColor: theme.colors.blueGray[700],
+        },
         tabBarStyle: {
           height: 70,
           paddingBottom: 8,
           paddingTop: 8,
+          backgroundColor: theme.colors.blueGray[700],
+          borderTopWidth: 1,
+          borderTopColor: theme.colors.blueGray[400],
         },
         tabBarLabelStyle: {
           fontSize: 13,
           display: "none"
         },
-        tabBarActiveTintColor: theme.colors.green[600]
+        tabBarInactiveTintColor: theme.colors.blueGray[300],
+        tabBarActiveTintColor: theme.colors.primary[500]
       }}
     >
       <Tab.Screen

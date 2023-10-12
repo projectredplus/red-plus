@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, ScrollView, Text } from "native-base";
-import { styles } from "./styles";
+import { ScrollView } from "native-base";
+
 import { Atividade } from "../../components/atividade";
 import { atividades } from "../../assets/data/atividades";
 
@@ -9,7 +9,7 @@ export const AtividadesRoute = "Atividades";
 export function Atividades() {
   return (
     <React.Fragment>
-      <ScrollView flex={1} padding={3}>
+      <ScrollView flex={1} padding={3} backgroundColor={"blueGray.700"}>
         {atividades.map(atividade => (
           <Atividade
             key={atividade.name}

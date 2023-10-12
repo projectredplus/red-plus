@@ -27,8 +27,8 @@ export function Tema({ tema }) {
   return (
     <React.Fragment>
       <View flex={1} w={"100%"}>
-        <Link width={"100%"} p={"1px"} onPress={() => setEditorOpen(!editorOpen)}>
-          <HStack width={"100%"} p={2} px={3} bg={"green.600"} borderRadius={8} borderWidth={1} borderColor={"gray.200"}>
+        <Link width={"100%"} py={"3px"} onPress={() => setEditorOpen(!editorOpen)}>
+          <HStack width={"100%"} p={2} px={3} bg={"blueGray.500"} borderRadius={8} borderWidth={1} borderColor={"blueGray.200"}>
             <Text color={"white"} fontSize={18} bold fontWeight={"600"}>{tema}</Text>
           </HStack>
         </Link>

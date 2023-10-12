@@ -21,12 +21,11 @@ export function Home({ navigation }) {
   }
 
   const handleSubmit = (e) => {
-    console.log(user)
+    e.preventDefault();
     if (user != null) {
       saveUser(user)
       setHasUser(user)
     };
-    e.preventDefault();
   }
 
   React.useEffect(() => {
@@ -37,19 +36,18 @@ export function Home({ navigation }) {
   }, [navigation])
 
   return (
-    <Center flex={1} backgroundColor="white">
-      <Image position={"absolute"} w={"100%"} h={"100%"} zIndex={0} source={bg} alt="Background" />
+    <Center flex={1} backgroundColor={"blueGray.700"}>
       <Image w={"200px"} h={"200px"} source={logo} alt="Logo" />
-      <Text textAlign={"center"} w={"85%"} mb={3.5} fontSize={17}>
+      <Text textAlign={"center"} w={"85%"} mb={3.5} fontSize={17} >
         <Text bold>RedPlus:</Text> O uso das tecnologias aliadas ao ensino de redação rumo a <Text bold>nota máxima!</Text>
       </Text>
       {hasUser == null
         ? (
           <React.Fragment>
             <Heading fontSize={28} fontWeight={"900"} mb={3}>Bem vindo ao RedPlus!</Heading>
-            <Box width={"75%"}>
-              <Input backgroundColor={"white"} onChangeText={value => setUser(value)} mb={2} placeholder="Digite seu nome" fontSize={18} />
-              <Button onPress={(e) => handleSubmit(e)} colorScheme={"amber"}>Enviar</Button>
+            <Box width={"80%"}>
+              <Input borderColor={"blueGray.200"} placeholderTextColor={"blueGray.200"} onChangeText={value => setUser(value)} mb={2} placeholder="Digite seu nome" fontSize={18} />
+              <Button onPress={(e) => handleSubmit(e)} colorScheme={"primary"} size="lg">Enviar</Button>
             </Box>
           </React.Fragment>
         )

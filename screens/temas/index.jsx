@@ -9,7 +9,7 @@ export const TemasRoute = "Possíveis temas";
 export function Temas() {
   return (
     <React.Fragment>
-      <ScrollView flex={1} padding={3}>
+      <ScrollView flex={1} padding={3} backgroundColor={"blueGray.700"}>
         {temas.map(tema => (
           <Tema
             key={tema}
