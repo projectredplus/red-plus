@@ -10,7 +10,7 @@ import {
   Link,
   ScrollView,
   Alert,
-  extendTheme
+  extendTheme,
 } from "native-base";
 import Icon from "react-native-vector-icons/Ionicons";
 import { Stopwatch } from "react-native-stopwatch-timer";
@@ -66,6 +66,21 @@ export function Escrever() {
             </Alert>
           ) : null
         ) : null}
+        <Center backgroundColor={"blueGray.500"}  p={2}>
+          <HStack alignItems={"center"}>
+            <Text>Estrutura da redação</Text>
+            <Link
+              justifyContent={"center"}
+              bg={"green.500"}
+              p={1.5}
+              px={3}
+              ml={2}
+              borderRadius={6}
+            >
+              <Text color={"white"}>Download</Text>
+            </Link>
+          </HStack>
+        </Center>
         <Center flex={1} p={3}>
           <Stopwatch
             laps
