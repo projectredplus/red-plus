@@ -28,13 +28,9 @@ export function AreaAluno({ navigation }) {
   const getUser = async () => {
     const existingUser = await AsyncStorage.getItem("@user");
     const existingPicture = await AsyncStorage.getItem("@picture");
-    if (existingUser) {
-      setHasUser(existingUser);
-      setHasPicture(existingPicture);
-    } else {
-      setHasUser(null);
-      setHasPicture(null);
-    }
+
+    setHasUser(existingUser || null);
+    setHasPicture(existingPicture || null);
   };
 
   const pickPicture = async () => {
@@ -96,13 +92,13 @@ export function AreaAluno({ navigation }) {
                     w={"100%"}
                     alt="Profile"
                     source={{ uri: hasPicture }}
-                    style={{ width: 200, height: 200 }}
+                    style={{ width: 100, height: 100 }}
                   />
                 )}
               </Button>
             ) : (
                 <Icon
-                onPress={() => {hasUser != null ?? pickPicture()}}
+                onPress={() => {pickPicture()}}
                 size={50}
                 name="plus"
                 color={"green"}
